@@ -1,0 +1,31 @@
+/* Navigation */
+nav{
+	background:#f2f2f2;
+	margin-top: 1em;
+	font-size: 100%
+}
+nav ul{
+	margin: 0;
+	text-align: center;
+}
+nav ul li{
+	display: inline-block;
+	margin: 0 1em;
+}
+nav ul li a:hover{
+	background-color: rgba(0, 100, 200, 0.4);
+}
+
+#content{
+	width: 80%;
+	margin: auto;
+}
+
+/* Section */
+section{
+	display: none;
+}
+
+section.active{
+	display: block;
+}

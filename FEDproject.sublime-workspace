@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"fun",
+				"function"
+			],
+			[
 				"enr",
 				"energyData"
 			],
@@ -60,11 +64,23 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/Jeffrey/Documents/FED2"
+		"/Users/Jeffrey/Documents/FED2",
+		"/Users/Jeffrey/Documents/FED2/media",
+		"/Users/Jeffrey/Documents/FED2/static",
+		"/Users/Jeffrey/Documents/FED2/static/images",
+		"/Users/Jeffrey/Documents/FED2/static/js",
+		"/Users/Jeffrey/Documents/FED2/static/js/lib"
 	],
 	"file_history":
 	[
+		"/Volumes/32GB/HVA/Front-end/DT1/index.html",
+		"/Volumes/32GB/HVA/Front-end/DT1/static/js/scoreapp.js",
 		"/Users/Jeffrey/Documents/FED2/index.html",
+		"/Users/Jeffrey/Documents/FED2/static/js/app.js",
+		"/Users/Jeffrey/Documents/FED2/static/css/style.css",
+		"/Users/Jeffrey/Documents/FED2/static/js/lib/routie.min.js",
+		"/Users/Jeffrey/Documents/FED2/static/js/lib/ready.min.js",
+		"/Users/Jeffrey/Documents/FED2/static/js/js.js",
 		"/Users/Jeffrey/Desktop/HVA/Datavis/eind/circ.html",
 		"/Users/Jeffrey/Desktop/HVA/Front-end/FED2/Opdrachten/js/app.js",
 		"/Users/Jeffrey/Desktop/HVA/Front-end/FED2/Opdrachten/static/css/main.css",
@@ -100,7 +116,7 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -114,6 +130,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"domready",
+			"init",
 			"#audio",
 			"# audio",
 			"# audio streams",
@@ -144,6 +162,11 @@
 			"sheets":
 			[
 			]
+		},
+		{
+			"sheets":
+			[
+			]
 		}
 	],
 	"incremental_find":
@@ -163,11 +186,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -211,7 +241,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
@@ -219,7 +249,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 192.0,
+	"side_bar_width": 116.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
