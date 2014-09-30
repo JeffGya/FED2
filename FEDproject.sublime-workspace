@@ -19,6 +19,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/private/var/folders/_n/5yff1kv54xq5_x9ssps2f9fc0000gn/T/5a4b6c53-d50b-4c87-92f0-e118d1977c5b/domains/jeffryg35.thirtyfive.axc.nl/public_html/test/robot.txt",
+			"settings":
+			{
+				"buffer_size": 25,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -67,17 +75,15 @@
 		"/Users/Jeffrey/Documents/FED2",
 		"/Users/Jeffrey/Documents/FED2/media",
 		"/Users/Jeffrey/Documents/FED2/static",
-		"/Users/Jeffrey/Documents/FED2/static/images",
-		"/Users/Jeffrey/Documents/FED2/static/js",
-		"/Users/Jeffrey/Documents/FED2/static/js/lib"
+		"/Users/Jeffrey/Documents/FED2/static/css"
 	],
 	"file_history":
 	[
-		"/Volumes/32GB/HVA/Front-end/DT1/index.html",
-		"/Volumes/32GB/HVA/Front-end/DT1/static/js/scoreapp.js",
-		"/Users/Jeffrey/Documents/FED2/index.html",
-		"/Users/Jeffrey/Documents/FED2/static/js/app.js",
 		"/Users/Jeffrey/Documents/FED2/static/css/style.css",
+		"/Users/Jeffrey/Documents/FED2/static/js/app.js",
+		"/Users/Jeffrey/Documents/FED2/index.html",
+		"/Volumes/32GB/HVA/Front-end/DT1/static/js/scoreapp.js",
+		"/Volumes/32GB/HVA/Front-end/DT1/index.html",
 		"/Users/Jeffrey/Documents/FED2/static/js/lib/routie.min.js",
 		"/Users/Jeffrey/Documents/FED2/static/js/lib/ready.min.js",
 		"/Users/Jeffrey/Documents/FED2/static/js/js.js",
@@ -130,6 +136,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"'s",
+			"'r",
+			"'m",
+			"'t",
+			"getJson",
 			"domready",
 			"init",
 			"#audio",
@@ -159,13 +170,37 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
-			]
-		},
-		{
-			"sheets":
-			[
+				{
+					"buffer": 0,
+					"file": "/private/var/folders/_n/5yff1kv54xq5_x9ssps2f9fc0000gn/T/5a4b6c53-d50b-4c87-92f0-e118d1977c5b/domains/jeffryg35.thirtyfive.axc.nl/public_html/test/robot.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 25,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								25,
+								25
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -186,18 +221,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":
@@ -241,7 +269,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
