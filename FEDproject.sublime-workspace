@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"direct",
+				"directives"
+			],
+			[
 				"fun",
 				"function"
 			],
@@ -20,10 +24,10 @@
 	"buffers":
 	[
 		{
-			"file": "/private/var/folders/_n/5yff1kv54xq5_x9ssps2f9fc0000gn/T/5a4b6c53-d50b-4c87-92f0-e118d1977c5b/domains/jeffryg35.thirtyfive.axc.nl/public_html/test/robot.txt",
+			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 25,
+				"buffer_size": 1606,
 				"line_ending": "Unix"
 			}
 		}
@@ -73,14 +77,16 @@
 	"expanded_folders":
 	[
 		"/Users/Jeffrey/Documents/FED2",
-		"/Users/Jeffrey/Documents/FED2/media",
 		"/Users/Jeffrey/Documents/FED2/static",
-		"/Users/Jeffrey/Documents/FED2/static/css"
+		"/Users/Jeffrey/Documents/FED2/static/css",
+		"/Users/Jeffrey/Documents/FED2/static/js"
 	],
 	"file_history":
 	[
-		"/Users/Jeffrey/Documents/FED2/static/css/style.css",
 		"/Users/Jeffrey/Documents/FED2/static/js/app.js",
+		"/Users/Jeffrey/Documents/FED2/static/js/app2.js",
+		"/private/var/folders/_n/5yff1kv54xq5_x9ssps2f9fc0000gn/T/5a4b6c53-d50b-4c87-92f0-e118d1977c5b/domains/jeffryg35.thirtyfive.axc.nl/public_html/test/robot.txt",
+		"/Users/Jeffrey/Documents/FED2/static/css/style.css",
 		"/Users/Jeffrey/Documents/FED2/index.html",
 		"/Volumes/32GB/HVA/Front-end/DT1/static/js/scoreapp.js",
 		"/Volumes/32GB/HVA/Front-end/DT1/index.html",
@@ -126,7 +132,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 106.0,
 		"where_history":
 		[
 		]
@@ -136,6 +142,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"cover",
 			"'s",
 			"'r",
 			"'m",
@@ -175,32 +182,37 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/private/var/folders/_n/5yff1kv54xq5_x9ssps2f9fc0000gn/T/5a4b6c53-d50b-4c87-92f0-e118d1977c5b/domains/jeffryg35.thirtyfive.axc.nl/public_html/test/robot.txt",
+					"file": "index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 25,
+						"buffer_size": 1606,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								25,
-								25
+								1546,
+								1546
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 362.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				}
+			]
+		},
+		{
+			"sheets":
+			[
 			]
 		}
 	],
@@ -221,11 +233,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -269,7 +288,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
