@@ -23,14 +23,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 1606,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -84,10 +76,11 @@
 	"file_history":
 	[
 		"/Users/Jeffrey/Documents/FED2/static/js/app.js",
+		"/Users/Jeffrey/Documents/FED2/index.html",
+		"/Users/Jeffrey/Documents/FED2/package.json",
 		"/Users/Jeffrey/Documents/FED2/static/js/app2.js",
 		"/private/var/folders/_n/5yff1kv54xq5_x9ssps2f9fc0000gn/T/5a4b6c53-d50b-4c87-92f0-e118d1977c5b/domains/jeffryg35.thirtyfive.axc.nl/public_html/test/robot.txt",
 		"/Users/Jeffrey/Documents/FED2/static/css/style.css",
-		"/Users/Jeffrey/Documents/FED2/index.html",
 		"/Volumes/32GB/HVA/Front-end/DT1/static/js/scoreapp.js",
 		"/Volumes/32GB/HVA/Front-end/DT1/index.html",
 		"/Users/Jeffrey/Documents/FED2/static/js/lib/routie.min.js",
@@ -177,40 +170,6 @@
 	"groups":
 	[
 		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 0,
-					"file": "index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1606,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1546,
-								1546
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 362.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
-			]
-		},
-		{
 			"sheets":
 			[
 			]
@@ -233,18 +192,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":
@@ -288,7 +240,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -296,7 +248,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 116.0,
+	"side_bar_width": 161.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

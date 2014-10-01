@@ -14,6 +14,7 @@
 				<ul>
 					<li><a href="#/about">About</a></li>
 					<li><a href="#/movies">Movies</a></li>
+					<li><a href="#/films">Films</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -38,6 +39,22 @@
 					</header>
 						<img class="image">
 					<p data-bind="description"></p>
+				</article>
+			</section>
+
+			<section data-route="films">
+				<article>
+					<h1 data-bind="title"></h1>
+					<p data-bind="plot"></p>
+					<em> Release date: <time data-bind="release_date"></time></em>
+					<img class="cover">
+					<p data-bind="genres"></p>
+					<ul data-bind="actors">
+						<li>
+							<p data-bind="actor_name"></p>
+							<p data-bind="character"></p>
+						</li>
+					</ul>
 				</article>
 			</section>
 		</main>
