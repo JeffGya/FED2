@@ -168,8 +168,6 @@ var movieAPP = movieAPP || {};
             movieAPP.sections.toggle(route);
         },
         toggle: function(route) {
-
-            var route = route,
             sections = qwery('section'),
             section = qwery('[data-route=' + route + ']')[0];
 
