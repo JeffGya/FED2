@@ -20,20 +20,21 @@ var APP = APP || {};
 				{title: "The Dark Knight", releaseDate:"18 July 2008", description:"When Batman, Gordon and Harvey Dent launch an assault on the mob, they let the clown out of the box, the Joker, bent on turning Gotham on itself and bringing any heroes down to his level.", image:"the-dark-knight.jpg" }
 			],
 
-		films: [
-			{ title: "title"
-
-			}
-		]
+		films: /*function() {
+			APP.xhr.trigger("GET", "http://dennistel.nl/movies",function(data){
+					APP.content.films = JSON.parse(data);
+					console.log('Dit is films data', APP.content.films);
+					});*/
+		}
 	};
 
-	APP.directives = {
+	/*APP.directives = {
 		image: {
 			src: function() {
 				return this.image;
 			}
 		}
-	};
+	};*/
 
 	//Controller Init
 	APP.controller = {
@@ -43,9 +44,6 @@ var APP = APP || {};
 
 			// pull data
 			APP.router.init();
-			APP.xhr.trigger("GET", "http://dennistel.nl/movies",function(data){
-				console.log(JSON.parse(data))
-			});
 		}
 	};
 
@@ -85,6 +83,10 @@ var APP = APP || {};
 				'/films': function() {
 					APP.section.render('films');
 				},
+				/*'/films/:id': function(){
+					sections.films()
+				}*/
+
 				'*': function() {
 					APP.section.render('about');
 				}
@@ -126,10 +128,6 @@ var APP = APP || {};
 				break;
 
 				case 'films':
-				/*APP.xhr.trigger("GET", "http://dennistel.nl/movies",function(data){
-					console.log(JSON.parse(data))
-					var data = filmData;
-				});*/
 				data = APP.content.films;
 				direct = APP.directives;
 				break;
@@ -142,6 +140,41 @@ var APP = APP || {};
 			APP.router.change();
 		}
 	};
+
+	APP.config = {
+		init: function() {
+			this.transparency();
+		},
+		
+		directives: {
+			image: {
+				src: function(params) {
+					return this.image;
+				}
+			}
+		},
+
+		xhr: {
+			trigger: function(type, url, success, data){
+				var req = new XMLHttpRequest;
+
+				req.open(type, url, true);
+
+				req.setRequestHeader('Content-type', 'application/json');
+
+				type === 'POST' ? req.send(data) : req.send(null);
+
+				req.onreadystatechange = function() {
+					if (req.readyState === 4) {
+						if(req.status === 200 || req.status === 201) {
+							success(req.responseText);
+						}
+					}
+				}
+			}
+		}
+	}
+
 
 	//DOM ready code
 	domready(function(){
