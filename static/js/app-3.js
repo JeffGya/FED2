@@ -3,31 +3,19 @@ var movieAPP = movieAPP || {};
 (function() {
 	movieAPP.controller = {
 		init: function() {
-			movieAPP.check.locStorage();
+			movieAPP.store.init();
 		}
 	};
 
-	movieAPP.check = {
-		locStorage: function() {
-            if (Modernizr.localstorage) {
-                console.log("localStorage supported");
-
-				movieAPP.xhr.trigger('GET', 'http://dennistel.nl/movies', function (response) {
-					localStorage.setItem('movies', response);
-					movieAPP.router.init();
-				});
-
-            } else {
-                console.log("no support for localStorage :(");
-
-				movieAPP.xhr.trigger('GET', 'http://dennistel.nl/movies', function (response) {
-					window.globalData = response;
-					window.localStorage.getItem = function(){return globalData};
-
-					movieAPP.router.init();
-				});
-            }
-        }
+    movieAPP.store = {
+    	init: function() {
+             movieAPP.xhr.trigger('GET', 'http://dennistel.nl/movies', function (response) {
+                //Store data in localstorage
+                localStorage.setItem('movies', response);
+                movieAPP.router.init();
+                //proceed with application
+            });
+         }
     };
 
    movieAPP.router = {
@@ -39,22 +27,21 @@ var movieAPP = movieAPP || {};
                     movieAPP.sections.renderAbout('about');
                     console.log("route changed: about");
 
-                    //movieAPP.content.about;
+                    movieAPP.content.about;
                     console.log("get data for: about");
                 },
                 '/movies': function() {
-                    movieAPP.sections.renderMovies('movies');
                     console.log("route changed: movies");
-
-					//movieAPP.content.movies;
-                    console.log("get data for: movies");
+                    movieAPP.sections.renderMovies('movies');
                 },
                 '/movies/:id': function(id) {
                     movieAPP.sections.renderFilm('film', id);
                     console.log("route changed: film id", id);
 
-                    movieAPP.content.movie;
                     console.log("get data for: film " + id);
+                },
+                '/movies/genre/:genre': function(genre) {
+                    movieAPP.sections.renderMoviesGenre('movies', genre);
                 },
                 '*': function() {
                     movieAPP.sections.renderAbout('about');
@@ -92,44 +79,81 @@ var movieAPP = movieAPP || {};
 	            description: "An overview of movies"
         },
 
-        movies: {
-            /*movies: JSON.parse(localStorage.getItem('movies')
-            moviesDirective: {
-                cover: {
-                    src: function () {
-                        return this.cover;
-                    },
-                    alt: function () {
-                        return this.title + ' cover';
-                    }
-                },
-                details: {
-                    href: function() {
-                        return '#movies/' + (this.id - 1);
-                    }
-                }
-            }*/
+        movies: function (){
+            var genre = '';
+
+            return  movieAPP.underscore.changeData();
+
         },
 
-        film: {/*function(id) {
-			console.log('create model for movie ', id);
-            var model = {
-                "movieDetails": JSON.parse(localStorage.getItem('movies'))[id],
-                "movieDirective": {
-                    cover: {
-                        src: function () {
-							console.log(this);
-                            return this.cover;
-                        },
-                        alt: function () {
-                            return this.title + ' cover';
-                        }
-                    }
-                }
-            };            
-            return movieAPP.sections.renderMovie(model);
-        }*/}
+        film: function(id) {
+            return  movieAPP.underscore.changeData(id);
+        },
+
+        moviesGenre: function(genre){
+            console.log('in moviesGenre', genre);
+            return  movieAPP.underscore.changeData(genre);
+        }
+
+        
     };
+
+    movieAPP.underscore = {
+
+        changeData: function(genre) {
+            var data = JSON.parse(localStorage.getItem('movies'));
+
+            //map reduce
+            _.map(data, function (movie, i){
+                    movie.reviews   = _.reduce(movie.reviews,   function(memo, review){   return memo + review.score; }, 0) / movie.reviews.length;
+                })
+
+            console.log('in changeData genre =', genre);
+            console.log('in changeData data =', data);
+           return(this.filter(data, genre));
+           
+        },
+
+        filter: function (data, genre) {
+            var hash = window.location.hash;
+            console.log(hash);
+            var splitHash = hash.split("/");
+            //console.log(splitHash[2]);
+            //console.log(splitHash[2] === "genre");
+            console.log('in filter data =', data);
+            var input = document.querySelector(".input").value;
+            console.log('input is', input)
+
+            if (splitHash[2] === "genre") {
+                console.log('in filter genre=',genre);
+                    var data = _.filter(data, function (data) {
+
+                        if (_.contains(data.genres, genre)) {
+                            console.log(data);
+                            return data;
+                        }
+                   });
+            } else if (input.length > 0) {
+                
+                var data = _.filter(data, function (data){
+                    var title = data.title.toLowerCase();
+                    _.contains(title, input)
+                });
+
+                /*var data = _.filter(data, function(data) {
+                    console.log('in search function input = ', input, 'en data is', data);
+                                var title = data.title.toLowerCase();
+                                
+                                if (title.indexOf(input.toLowerCase()) !=-1) {
+                                    return data;
+                                }
+                            });*/
+            }
+
+            return data;
+        }
+    };
+
 
     movieAPP.directives = {
 		cover: {
@@ -144,7 +168,7 @@ var movieAPP = movieAPP || {};
             href: function() {
                 return '#/movies/' + (this.id - 1);
             }
-        }
+        },
 	};
 
     movieAPP.sections = {
@@ -153,18 +177,21 @@ var movieAPP = movieAPP || {};
             Transparency.render(qwery('[data-route='+route+']')[0], movieAPP.content.about);
             movieAPP.sections.toggle(route);
         },
-        renderMovies: function(route) {
+        renderMovies: function(route, model) {
             console.log('render movies');
-            movieAPP.content.movies = JSON.parse(localStorage.getItem('movies'));
-            console.log('Parsed Data', movieAPP.content.movies);
-            Transparency.render(qwery('[data-route='+route+']')[0], movieAPP.content.movies, movieAPP.directives);
+            console.log("get data for: movies");
+            Transparency.render(qwery('[data-route='+route+']')[0], movieAPP.content.movies(), movieAPP.directives);
             movieAPP.sections.toggle(route);
         },
         renderFilm: function(route, id) {
             console.log('render details film ' + id);
-            movieAPP.content.film = JSON.parse(localStorage.getItem('movies'))[id];
-            console.log('Parsed Data film ' + id, movieAPP.content.film);
-            Transparency.render(qwery('[data-route='+route+']')[0], movieAPP.content.film, movieAPP.directives);
+            Transparency.render(qwery('[data-route='+route+']')[0], movieAPP.content.film()[id], movieAPP.directives);
+            movieAPP.sections.toggle(route);
+        },
+        renderMoviesGenre: function(route,genre) {
+            console.log('in renderMoviesGenre genre =', genre);
+            console.log('render details');
+            Transparency.render(qwery('[data-route='+route+']')[0], movieAPP.content.moviesGenre(genre), movieAPP.directives);
             movieAPP.sections.toggle(route);
         },
         toggle: function(route) {
