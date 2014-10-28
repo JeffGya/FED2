@@ -23,7 +23,6 @@ h1 {
 }
 
 /* Nav begin */
-
 .nav-trigger {
   position: absolute;
   clip: rect(0, 0, 0, 0);
@@ -93,15 +92,7 @@ ul#genreNav a:hover {
   background: white;
   color: #ca1f0d;
 }
-
-
 /* Nav end */
-
-.hidden {
-  float: right;
-  height: 100%;
-  background: green;
-}
 
 /*Content start*/
 section{
@@ -200,5 +191,22 @@ div a{
 
 }
 
+/* Article start */
+article {
+  background-color: white;
+}
 
+article ul li {
+  list-style: none;
+}
+
+.film {
+  padding: 1em;
+}
+.film article img.cover {
+  margin-right: 2%;
+}
+
+
+/*Article end*/
 /*Content end*/

@@ -11,7 +11,7 @@
         <link rel="author" href="humans.txt">
     </head>
     <body>
-			<nav id="side">
+			<nav>
 				<ul id="genreNav">
 					<li><a href="#/movies">Movies</a></li>
 					<li><a href="#/about">About</a></li>
@@ -61,10 +61,19 @@
 						<h2>Review score: <span data-bind="reviews"><span data-bind="score"></span></span></h2>
 						<p data-bind="plot"></p>
 						<em> Release date: <time data-bind="release_date"></time></em>
-					</header>	
-					<ul data-bind="actors">
-						<li><span class="actorName" data-bind="actor_name"></span> - <em class="character" data-bind="character"></em></li>
-					</ul>
+					</header>
+					<div class="direct">
+						<p>Directed by:</p>
+						<ul data-bind="directors">
+							<li><span class="name"></span></li>
+						</ul>
+					</div>
+					<div class="act">
+						<p>Starring:</p>
+						<ul data-bind="actors">
+							<li><span class="actorName" data-bind="actor_name"></span> - <em class="character" data-bind="character"></em></li>
+						</ul>
+					</div>
 				</article>
 			</section>
 		</main>
