@@ -44,10 +44,9 @@ var movieAPP = movieAPP || {};
                     movieAPP.sections.renderMoviesGenre('movies', genre);
                 },
                 '*': function() {
-                    movieAPP.sections.renderAbout('about');
+                    movieAPP.sections.renderMovies('movies');
                     console.log("route changed: default");
 
-                    /*movieAPP.content.about();*/
                     console.log("get data for: default");
                 }
             });
@@ -103,7 +102,6 @@ var movieAPP = movieAPP || {};
         changeData: function(genre) {
             var data = JSON.parse(localStorage.getItem('movies'));
 
-            //map reduce
             _.map(data, function (movie, i){
                     movie.reviews   = _.reduce(movie.reviews,   function(memo, review){   return memo + review.score; }, 0) / movie.reviews.length;
                 })
@@ -118,11 +116,8 @@ var movieAPP = movieAPP || {};
             var hash = window.location.hash;
             console.log(hash);
             var splitHash = hash.split("/");
-            //console.log(splitHash[2]);
-            //console.log(splitHash[2] === "genre");
+
             console.log('in filter data =', data);
-            var input = document.querySelector(".input").value;
-            console.log('input is', input)
 
             if (splitHash[2] === "genre") {
                 console.log('in filter genre=',genre);
@@ -133,23 +128,7 @@ var movieAPP = movieAPP || {};
                             return data;
                         }
                    });
-            } else if (input.length > 0) {
-                
-                var data = _.filter(data, function (data){
-                    var title = data.title.toLowerCase();
-                    _.contains(title, input)
-                });
-
-                /*var data = _.filter(data, function(data) {
-                    console.log('in search function input = ', input, 'en data is', data);
-                                var title = data.title.toLowerCase();
-                                
-                                if (title.indexOf(input.toLowerCase()) !=-1) {
-                                    return data;
-                                }
-                            });*/
             }
-
             return data;
         }
     };

@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"to",
+				"toLowerCase"
+			],
+			[
+				"rendermovi",
+				"renderMoviesGenre"
+			],
+			[
+				"r",
+				"return"
+			],
+			[
+				"change",
+				"changeData"
+			],
+			[
+				"ch",
+				"changeData"
+			],
+			[
+				"rend",
+				"renderMovies"
+			],
+			[
+				"get",
+				"getItem"
+			],
+			[
 				"m",
 				"movieAPP"
 			],
@@ -63,23 +107,15 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 2327,
+				"buffer_size": 3099,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "static/js/app.js",
+			"file": "static/css/style.css",
 			"settings":
 			{
-				"buffer_size": 5426,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "static/js/app-2.js",
-			"settings":
-			{
-				"buffer_size": 9730,
+				"buffer_size": 2451,
 				"line_ending": "Unix"
 			}
 		},
@@ -87,9 +123,8 @@
 			"file": "static/js/app-3.js",
 			"settings":
 			{
-				"buffer_size": 5667,
-				"line_ending": "Unix",
-				"name": "app3.js"
+				"buffer_size": 7020,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -138,20 +173,25 @@
 	"expanded_folders":
 	[
 		"/Users/Jeffrey/Documents/FED2",
-		"/Users/Jeffrey/Documents/FED2/static",
 		"/Users/Jeffrey/Documents/FED2/static/css",
 		"/Users/Jeffrey/Documents/FED2/static/js",
 		"/Users/Jeffrey/Documents/FED2/static/js/lib"
 	],
 	"file_history":
 	[
-		"/Users/Jeffrey/Documents/FED2/modernizr.js",
-		"/Users/Jeffrey/Documents/FED2/static/js/app.js",
+		"/Users/Jeffrey/Documents/FED2/static/css/normalize.css",
+		"/Users/Jeffrey/Documents/FED2/static/css/flexgrid.css",
+		"/Users/Jeffrey/Documents/FED2/static/css/style.css",
+		"/Users/Jeffrey/Documents/FED2/static/js/app-3.js",
 		"/Users/Jeffrey/Documents/FED2/index.html",
+		"/Users/Jeffrey/Documents/FED2/static/js/app.js",
+		"/Users/Jeffrey/Documents/FED2/static/js/lib/bonzo.min.js",
+		"/Users/Jeffrey/Documents/FED2/static/js/ underscore.min.js",
+		"/Users/Jeffrey/Documents/FED2/static/js/app-2.js",
+		"/Users/Jeffrey/Documents/FED2/modernizr.js",
 		"/Users/Jeffrey/Documents/FED2/package.json",
 		"/Users/Jeffrey/Documents/FED2/static/js/app2.js",
 		"/private/var/folders/_n/5yff1kv54xq5_x9ssps2f9fc0000gn/T/5a4b6c53-d50b-4c87-92f0-e118d1977c5b/domains/jeffryg35.thirtyfive.axc.nl/public_html/test/robot.txt",
-		"/Users/Jeffrey/Documents/FED2/static/css/style.css",
 		"/Volumes/32GB/HVA/Front-end/DT1/static/js/scoreapp.js",
 		"/Volumes/32GB/HVA/Front-end/DT1/index.html",
 		"/Users/Jeffrey/Documents/FED2/static/js/lib/routie.min.js",
@@ -206,6 +246,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"border",
+			");\n",
+			"console.log(genre)",
+			"filmGenre",
 			"toggle",
 			"		\n",
 			"bind",
@@ -247,7 +291,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -256,15 +300,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2327,
+						"buffer_size": 3099,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1245,
-								1245
+								761,
+								761
 							]
 						],
 						"settings":
@@ -273,7 +317,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 311.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -281,90 +325,62 @@
 				},
 				{
 					"buffer": 1,
-					"file": "static/js/app.js",
+					"file": "static/css/style.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5426,
+						"buffer_size": 2451,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2497,
-								2575
+								1172,
+								1172
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1.0,
+						"translation.y": 668.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "static/js/app-2.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9730,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6450,
-								6450
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1135.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "static/js/app-3.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5667,
+						"buffer_size": 7020,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								650,
-								650
+								1550,
+								1550
 							]
 						],
 						"settings":
 						{
-							"auto_name": "app3.js",
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"word_wrap": true
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 1649.0,
+						"translation.x": 20.0,
+						"translation.y": 347.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]

@@ -5,18 +5,17 @@
         <meta name="description" content="Web App V1, basic JavaScript Skeleton">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>My Favorite Movies</title>
+		<link rel="stylesheet" href="static/css/normalize.css">
+        <link rel="stylesheet" href="static/css/flexgrid.css">
         <link rel="stylesheet" href="static/css/style.css">
         <link rel="author" href="humans.txt">
     </head>
     <body>
-		<header>
-			<nav>
-				<ul>
-					<li><a href="#/about">About</a></li>
+			<nav id="side">
+				<ul id="genreNav">
 					<li><a href="#/movies">Movies</a></li>
-				</ul>
-
-				<ul>
+					<li><a href="#/about">About</a></li>
+					<hr>
 					<li><a href="#/movies">All Genres</a></li>
 					<li><a href="#/movies/genre/Horror">Horror</a></li>
 					<li><a href="#/movies/genre/Drama">Drama</a></li>
@@ -26,33 +25,12 @@
 					<li><a href="#/movies/genre/Adventure">Adventure</a></li>
 				</ul>
 			</nav>
-			<br>
-			Search
-			<br>
-			<form action="">
-				<input class="input" type='text' href="#/movies/filter">
-				<input type="button" value="Submit">
-			</form>
-			
-			<br><br>
-			Sort by:
-			<br>
-			<form action="">
-				<input type="radio" name="sortBy" value="none">Geen<br>
-				<input type="radio" name="sortBy" value="dateUp">Datum oplopend<br>
-				<input type="radio" name="sortBy" value="dateDown">Datum aflopend<br>
-			</form>
-			<br>
-			Group by:
-			<br>
-			<form action="">
-				<input type="radio" name="groupBy" value="none">Geen<br>
-				<input type="radio" name="groupBy" value="genre">genre<br>
-			</form>
-			<br>
-		</header>
+
+		<input type="checkbox" id="nav-trigger" class="nav-trigger" /><label for="nav-trigger"></label>
+
 		<main id="content">
-			<section data-route="about">
+
+			<section data-route="about" class="about">
 					<header>
 						<h1 data-bind="title"></h1>
 
@@ -62,38 +40,33 @@
 					</header>
 			</section>
 
-			<section data-route="movies">
+			<section data-route="movies" class="movies">
 				<article>
-					<header>
-						<h1 data-bind="title"></h1>
-						<ul class="genres">
-							<span class="genre"></span>
-						</ul>
-						<h2 data-bind="reviews">Review score: <span data-bind="score"></span></h2>
-						<p data-bind="simple_plot"></p>
-						<p><em> Release date: <time data-bind="release_date"></time></em></p>
-						<a class="details">More info</a>
-					</header>
-						<img class="cover">
-				</article>
-			</section>
-
-			<section data-route="film">
-			<a href="#/movies">Back</a>
-				<article>
-					<header>
-						<h1 data-bind="title"></h1>
-						<p data-bind="plot"></p>
-						<em> Release date: <time data-bind="release_date"></time></em>
-					</header>
-						<img class="cover">
-					<div data-bind="actors">
-						<p><span class="actorName" data-bind="actor_name"></span> - <em class="character" data-bind="character"></em><p>
+					<img class="cover">
+					<div>
+						<a class="details"><h1 data-bind="title"></h1></a>
+							
+						<h2>Review score: <span data-bind="reviews"><span data-bind="score"></span></span></h2>
+						<p class="simplePlot" data-bind="simple_plot"></p>
+						<p class="date"><em> Release date: <time data-bind="release_date"></time></em></p>
 					</div>
 				</article>
 			</section>
 
-
+			<section data-route="film" class="film">
+				<article>
+					<img class="cover">
+					<header>
+						<h1 data-bind="title"></h1>
+						<h2>Review score: <span data-bind="reviews"><span data-bind="score"></span></span></h2>
+						<p data-bind="plot"></p>
+						<em> Release date: <time data-bind="release_date"></time></em>
+					</header>	
+					<ul data-bind="actors">
+						<li><span class="actorName" data-bind="actor_name"></span> - <em class="character" data-bind="character"></em></li>
+					</ul>
+				</article>
+			</section>
 		</main>
 
 		<!-- Libraries worden hier toegevoegd aan de applicatie. -->
