@@ -1,6 +1,7 @@
+//Created movieApp namespace
 var movieApp = movieApp || {};
 
-(function() {
+(function() { 
 	movieApp.controller = {
 		init: function() {
 			movieApp.store.init();
@@ -9,27 +10,22 @@ var movieApp = movieApp || {};
 
     movieApp.store = {
     	init: function() {
+            //Haal API data op en sla op in localstorage
              movieApp.xhr.trigger('GET', 'http://dennistel.nl/movies', function (response) {
-                //Store data in localstorage
                 localStorage.setItem('movies', response);
                 movieApp.router.init();
-                //proceed with application
             });
          }
     };
 
-   movieApp.router = {
+    movieApp.router = {
+        // Routie zorgt ervoor dat de juiste data wordt opgehaald wanneer het opgevraagd wordt.
+        // Hij kijkt naar wat er achter de originele URL wordt gezet en pakt de juist data en geeft variable mee
+        // om de juiste data mee op te halen. 
         init: function() {
             console.log("router begins");
 
             routie({
-                '/about': function() {
-                    movieApp.sections.renderAbout('about');
-                    console.log("route changed: about");
-
-                    movieApp.content.about;
-                    console.log("get data for: about");
-                },
                 '/movies': function() {
                     console.log("route changed: movies");
                     movieApp.sections.renderMovies('movies');
@@ -54,6 +50,7 @@ var movieApp = movieApp || {};
     };
 
     movieApp.xhr = {
+        // xhr object om data uit de API op te halen.
         trigger: function (type, url, success, data) {
             var req = new XMLHttpRequest;
             req.open('GET', url, true);
@@ -73,10 +70,8 @@ var movieApp = movieApp || {};
     };
 
     movieApp.content = {
-        about: {
-	            title: "About",
-	            description: "An overview of movies"
-        },
+        // Content voor de app wordt hier opgehaald uit de localstorage
+        // genre en id wordt meegegeven bij moviesGenre en film om alleen die data terug te krijgen.
 
         movies: function (){
             var genre = '';
@@ -97,8 +92,10 @@ var movieApp = movieApp || {};
         
     };
 
-    movieApp.underscore = {
 
+    movieApp.underscore = {
+        // Met de underscore library worden in changeData de reviews bijelkaar opgeteld en verwerkt tot 1 cijfer en in filter
+        // wordt er gekeken of er een genre wordt meegegeven en dat genre wordt teruggestuurd.
         changeData: function(genre) {
             var data = JSON.parse(localStorage.getItem('movies'));
 
@@ -135,6 +132,9 @@ var movieApp = movieApp || {};
 
 
     movieApp.directives = {
+        // Directives zorgen ervoor dat links en images dynamisch worden toegevoegd samen met de rest van de content.
+        // Ik zorg er ook voor dat in details de id van de film wordt meegegeven zodat ik deze later kan gebruiken om
+        // de juiste data terug te krijgen bij het ophalen van de content.
 		cover: {
 			src: function() {
 				return this.cover;
@@ -151,11 +151,9 @@ var movieApp = movieApp || {};
 	};
 
     movieApp.sections = {
-        renderAbout: function(route) {
-            console.log('render about');
-            Transparency.render(qwery('[data-route='+route+']')[0], movieApp.content.about);
-            movieApp.sections.toggle(route);
-        },
+        // Hier wordt alles aanelkaar gelinked. Via routie wordt er gevraagd om een pagina te renderen en hier wordt er data
+        // van movieApp.content. toggle zorgt ervoor dat je juiste sections zichtbaar worden op het juiste moment. Hij ziet aan
+        // de route variable die mee is gekomen welke section een active class moet krijgen. 
         renderMovies: function(route, model) {
             console.log('render movies');
             console.log("get data for: movies");
