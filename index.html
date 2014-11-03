@@ -47,18 +47,21 @@
 						<p data-bind="plot"></p>
 						<em> Release date: <time data-bind="release_date"></time></em>
 					</header>
-					<div class="direct">
-						<p>Directed by:</p>
-						<ul data-bind="directors">
-							<li><span class="name"></span></li>
-						</ul>
+					<div>
+						<div class="direct">
+							<p>Directed by:</p>
+							<ul data-bind="directors">
+								<li><span class="name"></span></li>
+							</ul>
+						</div>
+						<div class="act">
+							<p>Starring:</p>
+							<ul data-bind="actors">
+								<li><span class="actorName" data-bind="actor_name"></span> - <em class="character" data-bind="character"></em></li>
+							</ul>
+						</div>
 					</div>
-					<div class="act">
-						<p>Starring:</p>
-						<ul data-bind="actors">
-							<li><span class="actorName" data-bind="actor_name"></span> - <em class="character" data-bind="character"></em></li>
-						</ul>
-					</div>
+					<div class="clear"></div>
 				</article>
 			</section>
 		</main>

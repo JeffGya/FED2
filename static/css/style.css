@@ -178,6 +178,46 @@ div a{
 }
 /*Grid view end*/
 
+/* Article start */
+article{
+  background-color:white;
+}
+
+article ul li{
+  list-style:none;
+}
+
+.film{
+  padding:1em;
+}
+
+.film article img.cover{
+  margin-right:2%;
+}
+
+.film article div {
+  flex: 0;
+    -webkit-flex-flow: column;
+  flex-flow: column;
+    -webkit-justify-content: space-between; 
+  justify-content: space-between;
+}
+
+.film article div p {
+  margin: 2% 0%;
+  color: #9a180a;
+  font-weight: bold;
+}
+
+.film article h2{
+  padding: 0 20px;
+}
+
+.film ul{
+  padding: 0;
+}
+
+
 @media screen and (max-width: 750px){
   html.touch .navTrigger, label{
     display:none;
@@ -212,9 +252,20 @@ div a{
     padding:12px;
   }
 
-}
+  .film article ul {
+      display:-webkit-box;
+      display:-moz-box;
+      display:-ms-flexbox;
+      display:-webkit-flex;
+    display:flex;
+      -webkit-flex-flow:wrap;
+    flex-flow: wrap;
+    padding: 0;
+  }
 
-@media screen and (max-width: 750px){
+  .film article em, [data-bind="plot"] {
+    padding: 0 20px;
+  }
 
   main{
     padding:2em;
@@ -226,19 +277,4 @@ div a{
 
 }
 
-/* Article start */
-article{
-  background-color:white;
-}
 
-article ul li{
-  list-style:none;
-}
-
-.film{
-  padding:1em;
-}
-
-.film article img.cover{
-  margin-right:2%;
-}
