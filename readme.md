@@ -17,11 +17,19 @@ Dit is een Webapp voor het vak Front End Development 2 (FED2)
 
 
 In deze app heb ik gebruik gemaakt van:
+
 [Normalize.css](http://necolas.github.io/normalize.css/)
+
 [Routie.js](http://projects.jga.me/routie/)
+
 [domReady](https://github.com/ded/domready)
+
 [Transparancy.js](https://github.com/leonidas/transparency)
+
 [Modernizer.js](http://modernizr.com/)
+
 [Qwery.js](https://github.com/ded/qwery)
+
 [Underscore.js](http://underscorejs.org/)
+
 [Hammer.js](http://hammerjs.github.io/)
