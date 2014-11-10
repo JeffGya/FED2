@@ -1,9 +1,7 @@
 #Readme Movie App
 =============================
 **Favoriete Films van Dennis**
-
 Dit is een Webapp voor het vak Front End Development 2 (FED2)
-
 ##Best Practices
 * Gebruik comments om de code duidelijk te maken waar nodig
 * Maak gebruik van camelCasing
