@@ -1,6 +1,6 @@
 #Readme Movie App
-------------------
 **Favoriete Films van Dennis**
+
 Dit is een Webapp voor het vak Front End Development 2 (FED2)
 ##Best Practices
 * Gebruik comments om de code duidelijk te maken waar nodig
@@ -9,7 +9,7 @@ Dit is een Webapp voor het vak Front End Development 2 (FED2)
 * Geef duidelijk aan welke libraries je hebt gebruikt, en no Jqeury!
 * Sla data op in de local storage
 * Laad scripts als laatste in, zodat de pagina snel geladen kan worden
-* Wees up to date met de nieuwste conventies in design en code.
+* Wees up to date met de nieuwste ontwikkelingen in design en code.
 
 
 In deze app heb ik gebruik gemaakt van:
